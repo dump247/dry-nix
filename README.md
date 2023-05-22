@@ -17,6 +17,6 @@ Add the package to the list of packages to install.
 
 ```nix
 packages = [
-  dry.${system}.default
+  dry.packages.${system}.default
 ];
 ```

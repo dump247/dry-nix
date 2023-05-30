@@ -8,7 +8,7 @@
   in {
     packages = nixpkgs.lib.mapAttrs (system: value:
       let
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = nixpkgs.legacyPackages.${system};
       in {
         default = with pkgs; stdenv.mkDerivation {
           inherit name;
